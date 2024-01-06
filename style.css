@@ -1,0 +1,289 @@
+@keyframes dino-run-1 {
+  0% {
+    left: -95px;
+    top: 71vh;
+  }
+  50% {
+    left: 11vw;
+    top: 57vh;
+  }
+  100% {
+    left: 100vw;
+    top: 72vh;
+  }
+}
+@keyframes dino-run-2 {
+  0% {
+    left: -95px;
+    top: 49vh;
+  }
+  50% {
+    left: 4vw;
+    top: 17vh;
+  }
+  100% {
+    left: 100vw;
+    top: 5vh;
+  }
+}
+@keyframes dino-run-3 {
+  0% {
+    right: -95px;
+    top: 15vh;
+  }
+  50% {
+    right: 10vw;
+    top: 88vh;
+  }
+  100% {
+    left: 100vw;
+    top: 81vh;
+  }
+}
+@keyframes dino-run-4 {
+  0% {
+    right: -95px;
+    top: 7vh;
+  }
+  50% {
+    right: 18vw;
+    top: 10vh;
+  }
+  100% {
+    right: 100vw;
+    top: 43vh;
+  }
+}
+@keyframes dino-run-1 {
+  0% {
+    left: -95px;
+    top: 54vh;
+  }
+  50% {
+    left: 14vw;
+    top: 8vh;
+  }
+  100% {
+    left: 100vw;
+    top: 84vh;
+  }
+}
+@keyframes dino-run-2 {
+  0% {
+    left: -95px;
+    top: 21vh;
+  }
+  50% {
+    left: 20vw;
+    top: 31vh;
+  }
+  100% {
+    left: 100vw;
+    top: 5vh;
+  }
+}
+@keyframes dino-run-3 {
+  0% {
+    right: -95px;
+    top: 28vh;
+  }
+  50% {
+    right: 42vw;
+    top: 85vh;
+  }
+  100% {
+    left: 100vw;
+    top: 87vh;
+  }
+}
+@keyframes dino-run-4 {
+  0% {
+    right: -95px;
+    top: 5vh;
+  }
+  50% {
+    right: 50vw;
+    top: 28vh;
+  }
+  100% {
+    right: 100vw;
+    top: 30vh;
+  }
+}
+@keyframes dino-run-1 {
+  0% {
+    left: -95px;
+    top: 23vh;
+  }
+  50% {
+    left: 24vw;
+    top: 14vh;
+  }
+  100% {
+    left: 100vw;
+    top: 61vh;
+  }
+}
+@keyframes dino-run-2 {
+  0% {
+    left: -95px;
+    top: 25vh;
+  }
+  50% {
+    left: 3vw;
+    top: 54vh;
+  }
+  100% {
+    left: 100vw;
+    top: 41vh;
+  }
+}
+@keyframes dino-run-3 {
+  0% {
+    right: -95px;
+    top: 21vh;
+  }
+  50% {
+    right: 52vw;
+    top: 57vh;
+  }
+  100% {
+    left: 100vw;
+    top: 19vh;
+  }
+}
+@keyframes dino-run-4 {
+  0% {
+    right: -95px;
+    top: 10vh;
+  }
+  50% {
+    right: 6vw;
+    top: 11vh;
+  }
+  100% {
+    right: 100vw;
+    top: 26vh;
+  }
+}
+@keyframes dino-run-1 {
+  0% {
+    left: -95px;
+    top: 27vh;
+  }
+  50% {
+    left: 12vw;
+    top: 59vh;
+  }
+  100% {
+    left: 100vw;
+    top: 13vh;
+  }
+}
+@keyframes dino-run-2 {
+  0% {
+    left: -95px;
+    top: 8vh;
+  }
+  50% {
+    left: 12vw;
+    top: 7vh;
+  }
+  100% {
+    left: 100vw;
+    top: 4vh;
+  }
+}
+@keyframes dino-run-3 {
+  0% {
+    right: -95px;
+    top: 45vh;
+  }
+  50% {
+    right: 25vw;
+    top: 2vh;
+  }
+  100% {
+    left: 100vw;
+    top: 27vh;
+  }
+}
+@keyframes dino-run-4 {
+  0% {
+    right: -95px;
+    top: 8vh;
+  }
+  50% {
+    right: 52vw;
+    top: 3vh;
+  }
+  100% {
+    right: 100vw;
+    top: 3vh;
+  }
+}
+.play {
+  background-color: gray;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 100px;
+  height: 75px;
+}
+
+.game {
+  counter-reset: count;
+  height: 100vh;
+  margin: 0;
+  background-image: url(./img/1120.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.dino-check {
+  position: absolute;
+  visibility: hidden;
+  left: -9999999px;
+}
+.dino-check:checked {
+  counter-increment: count;
+}
+.dino-check:checked ~ label {
+  display: none;
+}
+
+.counter-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.counter-info::before {
+  content: counter(count);
+}
+
+.dino {
+  position: absolute;
+}
+.dino__img {
+  width: 95px;
+}
+.dino_1 {
+  animation: dino-run-1 5s ease-in 1s both;
+}
+.dino_2 {
+  animation: dino-run-2 5s ease-in 2s both;
+}
+.dino_3 {
+  animation: dino-run-3 5s ease-in 3s both;
+}
+.dino_4 {
+  animation: dino-run-4 5s ease-in 4s both;
+}/*# sourceMappingURL=style.css.map */
